@@ -1,5 +1,6 @@
 export default class Book {
   #reservations;
+
   constructor() {
     this.#reservations = [];
   }
@@ -10,7 +11,7 @@ export default class Book {
 
   hasReservation(customer) {
     return this.#reservations.some(
-      (reservedCustomer) => reservedCustomer.id === customer.id
+      (reservedCustomer) => reservedCustomer.id === customer.id,
     );
   }
 }
